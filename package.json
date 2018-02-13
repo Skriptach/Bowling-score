@@ -1,0 +1,19 @@
+{
+  "name": "bowling-score",
+  "version": "1.0.0",
+  "description": "American 10-pin Bowling score counting script",
+  "main": "bs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skriptach/Skriptach.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Skriptach/Skriptach.github.io/issues"
+  },
+  "homepage": "https://github.com/Skriptach/Skriptach.github.io#readme"
+}
