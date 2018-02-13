@@ -14,7 +14,7 @@ function getTurnData (turnCode) {
 		isSpare = !isStrike && spareRX.test(turnCode);
 	return {
 		firstRollScore: isStrike? 10 : +turnCode[0],
-		secondRollScore: isStrike? 0 : isSpare? 10-turnCode[0] : +turnCode[1],
+		secondRollScore: (isStrike? 0 : isSpare? 10-turnCode[0] : +turnCode[1])||0,
 		isSpare,
 		isStrike
 	};
