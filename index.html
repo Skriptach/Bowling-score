@@ -8,5 +8,22 @@
 <body>
 	<h1>Welcome!</h1>
 	<p>American 10-pin Bowling score counting script.</p>
+	<p>
+		<label>Input your sequence: <input id="sequence" type="text"></label>
+		<button id="score">Score!</button>
+	</p>
+	<div id="reults"></div>
+	<script>
+		let score = document.getElementById('score');
+		let reultsList = document.getElementById('reults');
+		let sequence = document.getElementById('sequence');
+
+		score.addEventListener('click', () => {
+			let result = document.createElement('p');
+			
+			result.innerHTML = sequence.value + ': <b>'+ BowlingScore(sequence.value) + '</b>';
+			reultsList.appendChild(result);
+		});
+	</script>
 </body>
 </html>
