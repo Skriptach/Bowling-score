@@ -26,9 +26,9 @@ var BowlingScore = (sequenceFrames) => {
 		.match(turnRX);
 
 	return series
-			.map((curentTurnCode) => getTurnData(curentTurnCode))
+			.map(getTurnData)
 			.reduce((totalScore, current, i, array) => {
-				if(i>9){return totalScore};
+				if(i>9){return totalScore;}
 
 				function lookAhead() {
 					return  current.isSpare  ? array[i+1].firstRollScore :
