@@ -31,9 +31,9 @@ var BowlingScore = (sequenceFrames) => {
 				if(i>9){return totalScore;}
 
 				function lookAhead() {
-					return  current.isSpare  ? array[i+1].firstRollScore :
-							current.isStrike ?
-								(array[i+1].isStrike? 10 + array[i+2].firstRollScore : array[i+1].firstRollScore + array[i+1].secondRollScore)
+					return  current.isSpare && !!array[i+1]  ? array[i+1].firstRollScore :
+							current.isStrike && !!array[i+1] ?
+								(array[i+1].isStrike && !!array[i+2]? 10 + array[i+2].firstRollScore : array[i+1].firstRollScore + array[i+1].secondRollScore)
 							:0;
 				}
 
