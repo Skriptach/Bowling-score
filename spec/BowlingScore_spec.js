@@ -34,4 +34,8 @@ describe('Bowling-score', () => {
 		expect(BowlingScore('5/ 4- 4/ -5 5/')).toBe(43);
 		// 10+4, 4, 10+0, 5, 10
 	});
+	it('extra turns should be ignored. Total score to be equal 132', () => {
+		expect(BowlingScore('X 34 X -5 X 72 X 42 6/ X 44 35')).toBe(132);
+		// 10+3+4, 7, 10+0+5, 5, 10+7+2, 9, 10+4+2, 6, 10+10, 10+4+4
+	});
 });
