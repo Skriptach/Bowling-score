@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Skriptach/Skriptach.github.io/issues"
   },
-  "homepage": "https://github.com/Skriptach/Skriptach.github.io#readme"
+  "homepage": "https://github.com/Skriptach/Skriptach.github.io#readme",
+  "devDependencies": {
+    "jasmine": "^3.0.0"
+  }
 }
