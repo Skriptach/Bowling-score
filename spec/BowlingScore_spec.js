@@ -20,10 +20,18 @@ describe('Bowling-score', () => {
 	});
 	it('intervaling spare and non-spare should be equal 96', () => {
 		expect(BowlingScore('5/ 4- 4/ -5 5/ 36 6/ 23 5/ 7-')).toBe(96);
-		// 10+4, 4, 10+0, 5, 10+3, 9, 10+2, 5, 10+7, 7 
+		// 10+4, 4, 10+0, 5, 10+3, 9, 10+2, 5, 10+7, 7
 	});
 	it('intervaling strikes and non-strikes should be equal 156', () => {
 		expect(BowlingScore('X 34 X -5 X 72 X X 6/ X 44')).toBe(156);
 		// 10+3+4, 7, 10+0+5, 5, 10+7+2, 9, 10+10+6, 10+6+4, 10+10, 10+4+4
+	});
+	it('partial sequence should be equal 54', () => {
+		expect(BowlingScore('X 34 X -5 X')).toBe(54);
+		// 10+3+4, 7, 10+0+5, 5, 10
+	});
+	it('partial sequence should be equal 43', () => {
+		expect(BowlingScore('5/ 4- 4/ -5 5/')).toBe(43);
+		// 10+4, 4, 10+0, 5, 10
 	});
 });
